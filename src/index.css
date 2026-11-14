@@ -1,0 +1,81 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --font-display: 'Playfair Display', Georgia, serif;
+    --font-serif-body: 'Source Serif 4', Georgia, serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    --litera-ivory: #FBF9F5;
+    --litera-limestone: #F3EFE6;
+    --litera-paper: #FFFFFF;
+    --litera-ink: #1C1917;
+    --litera-muted: #57534E;
+    --litera-umber: #785032;
+    --litera-umber-hover: #5E3D24;
+    --litera-border: #E6DFD1;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--litera-ivory);
+    color: var(--litera-ink);
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+    text-wrap: balance;
+  }
+
+  .font-prose {
+    font-family: var(--font-serif-body);
+  }
+
+  code, pre, .font-mono {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.litera-prose p + p {
+  margin-top: 1.35em;
+}
+
+.litera-prose blockquote {
+  margin: 1.75em 0;
+  padding: 1.25em 1.5em;
+  border-top: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
+  opacity: 0.88;
+  font-style: italic;
+}
+
+.litera-prose h2, .litera-prose h3 {
+  font-family: var(--font-display);
+  margin-top: 1.8em;
+  margin-bottom: 0.7em;
+  font-weight: 600;
+}
+
+.litera-dropcap::first-letter {
+  font-family: var(--font-display);
+  float: left;
+  font-size: 3.6rem;
+  line-height: 0.85;
+  padding-top: 0.08em;
+  padding-right: 0.14em;
+  font-weight: 600;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

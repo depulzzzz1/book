@@ -1,0 +1,6 @@
+{
+  "name": "LITERA",
+  "description": "Enterprise editorial digital literature library, distraction-free reading engine, author publishing studio, community platform, and governance control center.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
